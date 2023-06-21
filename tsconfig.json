@@ -1,0 +1,10 @@
+{
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+        "target": "es2022",
+        "module": "es2022",
+        "removeComments": false,
+        "sourceMap": false,
+        "resolveJsonModule": true,
+    }
+}
