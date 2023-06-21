@@ -6,6 +6,7 @@
 const { resolve } = require('path');
 const { TsconfigPathsPlugin } = require("tsconfig-paths-webpack-plugin");
 const htmlWebpackPlugin = require('html-webpack-plugin')
+const CopyPlugin = require("copy-webpack-plugin")
 const webpack = require("webpack")
 
 
@@ -22,6 +23,8 @@ const serverDevConfiguration = {
 		"home_chunk": resolve("./src/chunck.home.ts"),
 		"about_chunk": resolve("./src/chunck.about.ts"),
 		"blog_chunk": resolve("./src/chunck.blog.ts"),
+		"events_chunk": resolve("./src/chunck.events.ts"),
+
 
 	},
 	devtool: "inline-source-map",
@@ -91,7 +94,7 @@ const serverDevConfiguration = {
 			inject: "body",
 
 			//the generated file in the website
-			filename: "blogs.html",
+			filename: "blog.html",
 
 			/**
 			 * This is where we specify individual controllers for every html page
@@ -101,6 +104,48 @@ const serverDevConfiguration = {
 			chunks: ["blog_chunk"]
 
 		}),
+
+		new htmlWebpackPlugin({
+			title: "blogs",
+			cache: true,
+			//they have to share a common icon
+
+			favicon: resolve("./resources/favicon.ico"),
+			template: resolve("./src/views/view.events.html"),
+			inject: "body",
+
+			//the generated file in the website
+			filename: "events.html",
+
+			/**
+			 * This is where we specify individual controllers for every html page
+			 */
+
+
+			chunks: ["events_chunk"]
+
+		}),
+
+		new CopyPlugin({
+			patterns: [
+				{
+					from: resolve("./resources/css"), to: resolve("./out/css")
+
+				},
+				{
+					from: resolve("./resources/img"), to: resolve("./out/img")
+
+				},
+				{
+					from: resolve("./resources/js"), to: resolve("./out/js")
+
+				},
+				{
+					from: resolve("./resources/lib"), to: resolve("./out/lib")
+
+				}
+			]
+		})
 	],
 
 	module: {
@@ -124,11 +169,13 @@ const serverDevConfiguration = {
 		historyApiFallback: true,
 		// open: true,
 		liveReload: true,
-		magicHtml: true
+		magicHtml: true,
+
 	},
 
+
 	output: {
-		filename: "[name].[contenthash].js",
+		filename: "controllers/[name].[contenthash].js",
 		path: resolve("./out"),
 		clean: true,
 

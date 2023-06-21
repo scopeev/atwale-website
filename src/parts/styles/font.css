@@ -1,0 +1,13 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Atawaale Child Support Uganda. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+/*
+    To be removed at build time
+*/
+
+@font-face {
+    font-family: playfair;
+    src: url("../../../resources/fonts/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
+}
