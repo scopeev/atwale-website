@@ -3,20 +3,22 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
+
+
+// /**
+//  * Dev Server;
+//  * 
+//  * @type {import('webpack').Configuration}
+//  */
+
+
+const path = require('path');
 const { resolve } = require('path');
 const { TsconfigPathsPlugin } = require("tsconfig-paths-webpack-plugin");
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require("copy-webpack-plugin")
-const webpack = require("webpack")
 
-
-/**
- * Dev Server;
- * 
- * @type {import('webpack').Configuration}
- */
-
-const serverDevConfiguration = {
+module.exports = {
 	mode: "production",
 	target: "web",
 	entry: {
@@ -106,7 +108,6 @@ const serverDevConfiguration = {
 			chunks: ["blog_chunk"]
 
 		}),
-
 
 		new htmlWebpackPlugin({
 			cache: true,
@@ -227,6 +228,4 @@ const serverDevConfiguration = {
 	optimization: {
 		runtimeChunk: "single",
 	},
-};
-
-module.exports = serverDevConfiguration;
+}
