@@ -1576,6 +1576,18 @@ a:focus {
     }
 }
 
+@media screen and (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .container {
+      padding: 5px;
+    }
+  }
+
 @media (max-width: 575.98px) {
     .contact .contact-form {
         max-width: 300px;
