@@ -132,13 +132,13 @@
     // Team slide
     window.addEventListener('DOMContentLoaded', function() {
         var carousel = document.querySelector('.team');
-        var directors = document.querySelectorAll('.team-item');
+        var team = document.querySelectorAll('.team-item');
         var index = 0;
       
         setInterval(function() {
-          directors[index].classList.remove('slide-in');
-          index = (index + 1) % directors.length;
-          directors[index].classList.add('slide-in');
+          team[index].classList.remove('slide-in');
+          index = (index + 1) % team.length;
+          team[index].classList.add('slide-in');
         }, 3000);
       });     
 
