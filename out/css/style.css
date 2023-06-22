@@ -1018,6 +1018,10 @@ a:focus {
     background: rgba(0, 0, 0, 0.742);
 }
 
+row-facts {
+    background: #000;
+}
+
 .facts .facts-item {
     display: flex;
     flex-direction: row;
@@ -1612,7 +1616,7 @@ a:focus {
 }
 
 .content-values {
-    margin: 80px;
+    margin: 10px;
 }
 
 

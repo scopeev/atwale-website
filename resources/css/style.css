@@ -1016,7 +1016,9 @@ a:focus {
     display: flex;
     align-items: center;
     background: rgba(0, 0, 0, 0.742);
+    background-blend-mode: multiply;
 }
+
 
 .facts .facts-item {
     display: flex;
@@ -1238,6 +1240,7 @@ a:focus {
     width: 100%;
     margin: 45px 0;
     background: rgba(0, 0, 0, 0.85);
+    background-blend-mode: multiply;
 }
 
 .volunteer .volunteer-content {
@@ -1612,7 +1615,7 @@ a:focus {
 }
 
 .content-values {
-    margin: 80px;
+    margin: 10px;
 }
 
 
