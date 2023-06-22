@@ -17,7 +17,7 @@ const webpack = require("webpack")
  */
 
 const serverDevConfiguration = {
-	mode: "development",
+	mode: "production",
 	target: "web",
 	entry: {
 		"home_chunk": resolve("./src/chunck.home.ts"),
@@ -223,14 +223,11 @@ const serverDevConfiguration = {
 		filename: "controllers/[name].[contenthash].js",
 		path: resolve("./out"),
 		clean: true,
-
 	},
 
 	optimization: {
 		runtimeChunk: "single",
 	},
-
-
 };
 
 module.exports = serverDevConfiguration;
