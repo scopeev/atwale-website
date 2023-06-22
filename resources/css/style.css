@@ -1093,7 +1093,8 @@ a:focus {
 }
 
 .team .team-img img {
-    width: 100%;
+    width: 300px;
+    height: 200px;
     transform: scale(1.1);
     margin-bottom: -15px;
     transition: .3s;
