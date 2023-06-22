@@ -150,6 +150,11 @@ export class ContactService {
 
     private async createEmailSpoolService() {
 
+        const xmlHttp = new XMLHttpRequest();
+        // xmlHttp.
+        xmlHttp.open("POST", "https://backend.service>/")
+        xmlHttp.send()
+
         emailProvider({
             to: this.__email__, // Company Email
             from: this.emailValue,
@@ -170,7 +175,10 @@ export class ContactService {
                     this.mainForm.dispatchEvent(new CustomEvent("email-sucess"))
                 }
             }
-        })
+        });
+
+
+
     }
 
     /**
