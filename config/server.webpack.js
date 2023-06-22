@@ -167,7 +167,7 @@ const serverDevConfiguration = {
 	devServer: {
 		static: resolve("./out"),
 		historyApiFallback: true,
-		// open: true,
+		open: true,
 		liveReload: true,
 		magicHtml: true,
 
