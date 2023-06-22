@@ -1084,9 +1084,7 @@ a:focus {
 
 .team .team-item {
     position: relative;
-    margin: 0 10px;
-    display: inline-block;
-    text-align: center;
+    margin-bottom: 35px;
 }
 
 .team .team-img {
@@ -1099,11 +1097,7 @@ a:focus {
     height: 300px;
     transform: scale(1.1);
     margin-bottom: -15px;
-    transition: transform 0.5s ease-in-out;
-}
-
-.slide-in {
-  transform: translateX(-20%); 
+    transition: .3s;
 }
 
 .team .team-img3 {
