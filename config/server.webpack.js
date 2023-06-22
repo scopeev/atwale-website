@@ -24,6 +24,8 @@ const serverDevConfiguration = {
 		"about_chunk": resolve("./src/chunck.about.ts"),
 		"blog_chunk": resolve("./src/chunck.blog.ts"),
 		"events_chunk": resolve("./src/chunck.events.ts"),
+		"team_chunk": resolve("./src/chunck.team.ts"),
+		"contact_chunk": resolve("./src/chunck.contact.ts"),
 
 
 	},
@@ -105,6 +107,7 @@ const serverDevConfiguration = {
 
 		}),
 
+
 		new htmlWebpackPlugin({
 			title: "blogs",
 			cache: true,
@@ -123,6 +126,48 @@ const serverDevConfiguration = {
 
 
 			chunks: ["events_chunk"]
+
+		}),
+
+		new htmlWebpackPlugin({
+			title: "team",
+			cache: true,
+			//they have to share a common icon
+
+			favicon: resolve("./resources/favicon.ico"),
+			template: resolve("./src/views/view.team.html"),
+			inject: "body",
+
+			//the generated file in the website
+			filename: "team.html",
+
+			/**
+			 * This is where we specify individual controllers for every html page
+			 */
+
+
+			chunks: ["team_chunk"]
+
+		}),
+
+		new htmlWebpackPlugin({
+			title: "contact",
+			cache: true,
+			//they have to share a common icon
+
+			favicon: resolve("./resources/favicon.ico"),
+			template: resolve("./src/views/view.contact.html"),
+			inject: "body",
+
+			//the generated file in the website
+			filename: "contact.html",
+
+			/**
+			 * This is where we specify individual controllers for every html page
+			 */
+
+
+			chunks: ["contact_chunk"]
 
 		}),
 

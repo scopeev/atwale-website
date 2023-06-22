@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "server-ascu": "node ./node_modules/webpack/bin/webpack.js serve --config ./config/server.webpack.js"
+    "serve": "node ./node_modules/webpack/bin/webpack.js serve --config ./config/server.webpack.js"
   },
   "devDependencies": {
     "@types/sendmail": "^1.4.4",
