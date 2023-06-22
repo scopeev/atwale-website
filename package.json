@@ -1,14 +1,17 @@
 {
   "name": "ascu",
   "version": "1.0.0",
-  "description": "Helping Children",
+  "description": "Atawale Child Support Uganda",
   "main": "main",
-  "repository": "https://github.com/Ixac77/ACSU",
+  "repository": "https://github.com/scopeev/atwale-website",
   "author": "Scoped Dev",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "node ./node_modules/webpack/bin/webpack.js serve --config ./config/server.webpack.js"
+    "build": "webpack",
+    "build:watch": "webpack --watch",
+    "serve": "webpack serve",
+    "clean": "rm -rf dist"
   },
   "devDependencies": {
     "@types/sendmail": "^1.4.4",
