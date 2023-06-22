@@ -12,8 +12,18 @@ import { Controller } from "../common/controller";
 export class AboutController extends Controller {
 
 
+    constructor() {
+        super();
+
+    }
+
+    async init() {
+
+    }
+
 
 
 }
 
-// const controller = new AboutController();
+const controller = new AboutController();
+controller.init()

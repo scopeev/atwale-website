@@ -109,7 +109,6 @@ const serverDevConfiguration = {
 
 
 		new htmlWebpackPlugin({
-			title: "blogs",
 			cache: true,
 			//they have to share a common icon
 

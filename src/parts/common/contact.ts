@@ -21,24 +21,24 @@
 
 // /**
 //  * This is the contact service(Sending Emails) apply in the controllers of the pages that need the contact service
-//  * 
+//  *
 //  * while removing their original implmentation of the contact.js & contact.php because we don't need these ones
-//  * 
-//  * 
+//  *
+//  *
 //  * @usage
-//  * 
+//  *
 //  * @@test-> validation is True
-//  * 
+//  *
 //  * class HomeController {
-//  * 
-//  *  
+//  *
+//  *
 //  *  async init(){
-//  * 
+//  *
 //  *      //like this to enable testing with various email addresses simultaneously
-//  * 
-//  *      const emailContactService = new ContactService("atawalechilduganda@gmail.com")    
+//  *
+//  *      const emailContactService = new ContactService("atawalechilduganda@gmail.com")
 //  *  }
-//  * 
+//  *
 //  * }
 //  */
 
@@ -69,7 +69,7 @@
 
 //     /**
 //      * The Email we wish to send to (the company Email)
-//      * @param __email__ 
+//      * @param __email__
 //      */
 //     constructor(public __email__: string) {
 //         this.init();
@@ -79,12 +79,12 @@
 
 //     /**
 //      * --------------------------------------------------------
-//      * 
+//      *
 //      * Startup For the contact Service:
-//      * 
+//      *
 //      * this should remain private for auto Initializing on individual Pages
 //      * ---------------------------------------------------------
-//      * 
+//      *
 //      */
 
 //     private init() {
@@ -127,7 +127,7 @@
 
 
 //     /**
-//      * Query All Elements because this will keep them in the dom Scope longer for 
+//      * Query All Elements because this will keep them in the dom Scope longer for
 //      * continous rendering
 //      */
 
@@ -191,7 +191,7 @@
 //     }
 
 //     /**
-//      * 
+//      *
 //      * Display the succes or error containers in accordance to the events emitted
 //      */
 
@@ -238,7 +238,7 @@
 
 //             /**
 //              * We dont attach a click listener to the button because its type is a submit
-//              * button thus the form will listen for us the event 
+//              * button thus the form will listen for us the event
 //              */
 
 //             this.mainForm.addEventListener("submit", () => {
@@ -247,7 +247,7 @@
 //             })
 
 //             /**
-//              * Listen for failed occurrences 
+//              * Listen for failed occurrences
 //              */
 //             this.mainForm.addEventListener("email-failure", () => {
 //                 this.displaySuccessOrErrorContainer(false)
