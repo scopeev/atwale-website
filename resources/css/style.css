@@ -1085,6 +1085,14 @@ a:focus {
 .team .team-item {
     position: relative;
     margin-bottom: 35px;
+    display: inline-block;
+    width: 20%; /* Adjust as needed based on the number of directors */
+    text-align: center;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+.slide-in {
+    transform: translateX(-20%); 
 }
 
 .team .team-img {
