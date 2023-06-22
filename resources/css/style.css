@@ -6,7 +6,7 @@ body {
     font-weight: 500;
     background: #ffffff;
     font-family: 'Quicksand', sans-serif;
-    --primary-color: #fd5133;
+    --primary-color: #0070c0;
 }
 
 h1,
@@ -373,6 +373,8 @@ a:focus {
     min-height: 300px;
     text-align: right;
     overflow: hidden;
+    filter: brightness(40%)
+
 }
 
 .carousel .carousel-img::after {
@@ -542,7 +544,7 @@ a:focus {
     margin-bottom: 45px;
     padding: 210px 0 90px 0;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/page-header.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.74)), url(../img/page-header.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -551,7 +553,7 @@ a:focus {
 
 .page-header h2 {
     position: relative;
-    color: var(--primary-color);
+    color: #ffff;
     font-size: 60px;
     font-weight: 700;
     margin-bottom: 20px;
@@ -988,16 +990,17 @@ a:focus {
 
 .causes .causes-btn .btn {
     padding: 10px 0;
-    width: 50%;
+    width: 100%;
 }
 
-.causes .causes-btn .btn:last-child {
-    color: #20212B;
+.causes .causes-btn .btn {
+    color: #ffff;
     background: var(--primary-color);
 }
 
-.causes .causes-btn .btn:last-child:hover {
-    color: #ffffff;
+.causes .causes-btn .btn:hover {
+    color: #ffff;
+    background-color: #ffff;
 }
 
 
@@ -1012,7 +1015,7 @@ a:focus {
     margin: 45px 0;
     display: flex;
     align-items: center;
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, 0.742);
 }
 
 .facts .facts-item {
@@ -1091,6 +1094,10 @@ a:focus {
     transform: scale(1.1);
     margin-bottom: -15px;
     transition: .3s;
+}
+
+.team .team-img3 {
+    height: 300px;
 }
 
 .team .team-item:hover img {
@@ -1230,7 +1237,7 @@ a:focus {
     position: relative;
     width: 100%;
     margin: 45px 0;
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, 0.85);
 }
 
 .volunteer .volunteer-content {
@@ -1603,6 +1610,11 @@ a:focus {
     position: relative;
     padding: 45px 0;
 }
+
+.content-values {
+    margin: 80px;
+}
+
 
 .single .single-content {
     position: relative;
