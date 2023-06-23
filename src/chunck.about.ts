@@ -7,4 +7,4 @@
  * All JS and TS code that belongs to the home page
  */
 
-import "./parts/controllers/about/about.controller"
+import "./parts/controllers/about/about.controller";

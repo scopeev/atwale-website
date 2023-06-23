@@ -802,6 +802,7 @@ a:focus {
     width: 100%;
     margin: 45px 0;
     background: rgba(0, 0, 0, .5);
+    background-blend-mode: multiply;
 }
 
 .donate .donate-content {
@@ -1016,11 +1017,9 @@ a:focus {
     display: flex;
     align-items: center;
     background: rgba(0, 0, 0, 0.742);
+    background-blend-mode: multiply;
 }
 
-row-facts {
-    background: #000;
-}
 
 .facts .facts-item {
     display: flex;
@@ -1242,6 +1241,7 @@ row-facts {
     width: 100%;
     margin: 45px 0;
     background: rgba(0, 0, 0, 0.85);
+    background-blend-mode: multiply;
 }
 
 .volunteer .volunteer-content {

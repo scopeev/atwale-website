@@ -28,6 +28,7 @@ module.exports = {
 		"events_chunk": resolve("./src/chunck.events.ts"),
 		"team_chunk": resolve("./src/chunck.team.ts"),
 		"contact_chunk": resolve("./src/chunck.contact.ts"),
+		"donate_chunk": resolve("./src/chunck.donate.ts"),
 
 
 	},
@@ -171,6 +172,27 @@ module.exports = {
 
 		}),
 
+		new htmlWebpackPlugin({
+			title: "donate",
+			cache: true,
+			//they have to share a common icon
+
+			favicon: resolve("./resources/favicon.ico"),
+			template: resolve("./src/views/view.donate.html"),
+			inject: "body",
+
+			//the generated file in the website
+			filename: "donate.html",
+
+			/**
+			 * This is where we specify individual controllers for every html page
+			 */
+
+
+			chunks: ["donate_chunk"]
+		}),
+
+
 		new CopyPlugin({
 			patterns: [
 				{
@@ -190,7 +212,7 @@ module.exports = {
 
 				}
 			]
-		})
+		}),
 	],
 
 	module: {
