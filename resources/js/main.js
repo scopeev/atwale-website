@@ -128,6 +128,19 @@
         time: 2000
     });
 
+    
+    window.addEventListener('DOMContentLoaded', function() {
+        var carousel = document.querySelector('.team');
+        var directors = document.querySelectorAll('.director-item');
+        var index = 0;
+      
+        setInterval(function() {
+          directors[index].classList.remove('slide-in');
+          index = (index + 1) % directors.length;
+          directors[index].classList.add('slide-in');
+        }, 3000);
+      });     
+
 
     // Testimonials carousel
     $(".testimonials-carousel").owlCarousel({

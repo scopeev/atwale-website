@@ -1093,7 +1093,8 @@ a:focus {
 }
 
 .team .team-img img {
-    width: 100%;
+    width: 300px;
+    height: 300px;
     transform: scale(1.1);
     margin-bottom: -15px;
     transition: .3s;
@@ -1574,6 +1575,18 @@ a:focus {
         max-width: 400px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .container {
+      padding: 5px;
+    }
+  }
 
 @media (max-width: 575.98px) {
     .contact .contact-form {
